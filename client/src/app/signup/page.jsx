@@ -14,7 +14,7 @@ const page = () => {
     }
 
     const registerUser = async() => {
-        const register = await axios.post("http://localhost:5000/register",{email:detail.email,name:detail.name,phone:detail.phone,password:detail.password})
+        const register = await axios.post("https://profile-hzdh.onrender.com/register",{email:detail.email,name:detail.name,phone:detail.phone,password:detail.password})
         const response = register.data
         if(response.success){
             window.alert(response.success)

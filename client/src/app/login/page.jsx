@@ -16,7 +16,7 @@ const page = () => {
     }
 
     const loginUser = async() => {
-        const login = await axios.post("http://localhost:5000/login",{email:detail.email,password:detail.password})
+        const login = await axios.post("https://profile-hzdh.onrender.com/login",{email:detail.email,password:detail.password})
         const response = login.data
         if(response.success){
             Cookies.set("id",response.data)

@@ -19,7 +19,7 @@ const Profile = () => {
     }
     const id = Cookies.get("id")
     const fetchData = async () => {
-        const user = await axios.get("http://localhost:5000?_id="+id,)
+        const user = await axios.get("https://profile-hzdh.onrender.com?_id="+id,)
         setUserDetail(user.data)
         console.log(userDetail);
     }

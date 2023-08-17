@@ -7,7 +7,7 @@ const Header = ({toogle}) => {
   const id = Cookies.get("id")
   const [userDetail,setUserDetail]=useState([])
   const fetchData = async () => {
-    const user = await axios.get("http://localhost:5000?_id=64dd1254f3fb733b406728d8",)
+    const user = await axios.get("https://profile-hzdh.onrender.com?_id=64dd1254f3fb733b406728d8",)
     setUserDetail(user.data.name)
 }
 useEffect(() => { fetchData() }, [])

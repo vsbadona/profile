@@ -35,28 +35,28 @@ const Detail = ({ toogle, props }) => {
     const handleUpdate = async () => {
         const { name, email, phone,  about, certificate, skill, _id, course, university, esession, detail, company, csession, year, role, type,id ,image} = userDetails
         if (props.type == "personel") {
-            const update = await axios.post(`http://localhost:5000/update`, { name, email,image, phone, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/update`, { name, email,image, phone, _id: _id })
             if (update.data.success) {
                 toogle()
             } else {
                 window.alert(update.data.alert)
             }
         } else if (props.type == "about") {
-            const update = await axios.post(`http://localhost:5000/about`, { about, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/about`, { about, _id: _id })
             if (update.data.about) {
                 toogle()
             } else {
                 window.alert(update.data.alert)
             }
         } else if (props.type == "skills") {
-            const update = await axios.post(`http://localhost:5000/skill`, { skill, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/skill`, { skill, _id: _id })
             if (update.data.skill) {
                 toogle()
             } else {
                 window.alert(update.data.alert)
             }
         } else if (props.type == "certification") {
-            const update = await axios.post(`http://localhost:5000/certificate`, { certificate, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/certificate`, { certificate, _id: _id })
             if (update.data.certificate) {
                 toogle()
             } else {
@@ -64,7 +64,7 @@ const Detail = ({ toogle, props }) => {
             }
         } else if (props.type == "experiance") {
             const session = csession
-            const update = await axios.post(`http://localhost:5000/experiance`, { company, session, year, role, type, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/experiance`, { company, session, year, role, type, _id: _id })
             if (update.data.experiance) {
                 toogle()
             } else {
@@ -72,7 +72,7 @@ const Detail = ({ toogle, props }) => {
             }
         } else if (props.type == "education") {
             const session = esession
-            const update = await axios.post(`http://localhost:5000/education`, { university, course, session, detail, _id: _id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/education`, { university, course, session, detail, _id: _id })
             if (update.data.education) {
                 toogle()
             } else {
@@ -80,7 +80,7 @@ const Detail = ({ toogle, props }) => {
             }
         } else if (props.type == "editEducation") {
             const session = esession
-            const update = await axios.post(`http://localhost:5000/editeducation`, { university, course, session, detail, _id,id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/editeducation`, { university, course, session, detail, _id,id })
             if (update.data.education) {
                 toogle()
             } else {
@@ -88,14 +88,14 @@ const Detail = ({ toogle, props }) => {
             }
                 } else if (props.type == "editExperiance") {
             const session = csession
-            const update = await axios.post(`http://localhost:5000/editexperiance`, {  company, session, year, role, type, _id,id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/editexperiance`, {  company, session, year, role, type, _id,id })
             if (update.data.experiance) {
                 toogle()
             } else {
                 window.alert(update.data.alert)
             }
         } else if (props.type == "editSkills") {
-            const update = await axios.post(`http://localhost:5000/editskill`, { skill, _id,id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/editskill`, { skill, _id,id })
             if (update.data.skill) {
                 toogle()
             } else {
@@ -103,7 +103,7 @@ const Detail = ({ toogle, props }) => {
             }
         } else if (props.type == "editCertification") {
             const session = esession
-            const update = await axios.post(`http://localhost:5000/editcertificate`, { certificate,_id,id })
+            const update = await axios.post(`https://profile-hzdh.onrender.com/editcertificate`, { certificate,_id,id })
             if (update.data.certificate) {
                 toogle()
             } else {
